@@ -40,6 +40,6 @@ Votre serveur devrait maintenant être en cours d'exécution et accessible local
 
 ## Utilisation
 
-Une fois le serveur démarré, vous pouvez accéder à l'API du Todo List Backend. Pour plus de détails sur les endpoints disponibles et comment les utiliser, veuillez vous référer à la documentation de l'API accessible via [http://localhost:3000/todos](http://localhost:3000/api-docs) après avoir démarré le serveur.
+Une fois le serveur démarré, vous pouvez accéder à l'API du Todo List Backend. Pour plus de détails sur les endpoints disponibles et comment les utiliser, veuillez vous référer à la documentation de l'API accessible via [http://localhost:3000/api-docs](http://localhost:3000/api-docs) après avoir démarré le serveur.
 
 
