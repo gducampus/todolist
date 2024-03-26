@@ -8,7 +8,7 @@ Ces instructions vous permettront d'obtenir une copie du projet en cours d'exéc
 
 ### Prérequis
 
-Pour exécuter ce projet, vous aurez besoin de Node.js et npm installés sur votre machine. Vous pouvez télécharger Node.js et npm à partir d'[ici](https://nodejs.org/).
+Pour exécuter ce projet, vous aurez besoin de Node.js et npm installés sur votre machine. Vous pouvez télécharger Node.js et npm à partir d'[ici](https://nodejs.org/en/download).
 
 ### Installation
 
