@@ -18,14 +18,15 @@ Suivez ces étapes pour configurer le backend sur votre machine locale :
 
    Ouvrez un terminal et utilisez la commande suivante pour cloner le dépôt GitHub :
 
-``git clone https://github.com/gducampus/totolist.git``
+```git clone https://github.com/gducampus/totolist.git```
 
 2. **Installer les dépendances**
 
 Naviguez dans le répertoire du projet cloné et exécutez :
 
-`cd totolist`
-`npm install`
+```cd totolist```
+
+```npm install```
 
 Cette commande installera les dépendances nécessaires pour exécuter le backend.
 
@@ -33,7 +34,7 @@ Cette commande installera les dépendances nécessaires pour exécuter le backen
 
 Une fois les dépendances installées, vous pouvez démarrer le serveur avec :
 
-`npm start`
+```npm start```
 
 Votre serveur devrait maintenant être en cours d'exécution et accessible localement à l'adresse `http://localhost:3000`.
 
