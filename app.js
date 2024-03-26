@@ -194,15 +194,20 @@ app.get('/todos', (req, res) => {
  *               $ref: '#/components/schemas/Todo'
  */
 app.post('/todos', (req, res) => {
-    const todo = {
-        id: todos.length + 1,
+    // Création de la nouvelle tâche avec un ID unique.
+    const newTodo = {
+        id: todos[0].todolist.length + 1, // Assurez-vous que l'ID est unique dans le tableau todolist.
         text: req.body.text,
         created_at: new Date().toISOString(),
         Tags: req.body.Tags,
         is_complete: req.body.is_complete || false
     };
-    todos.push(todo);
-    res.status(201).send(todo);
+
+    // Ajout de la nouvelle tâche au tableau todolist à l'intérieur du premier objet du tableau todos.
+    todos[0].todolist.push(newTodo);
+
+    // Envoi de la nouvelle tâche comme réponse.
+    res.status(201).json(newTodo);
 });
 
 
@@ -248,35 +253,6 @@ app.put('/todos/:id', (req, res) => {
     }
 });
 
-
-/**
- * @swagger
- * /todos/{id}:
- *   delete:
- *     summary: Deletes a todo
- *     tags: [Todos]
- *     parameters:
- *       - in: path
- *         name: id
- *         schema:
- *           type: integer
- *         required: true
- *         description: The todo id
- *     responses:
- *       204:
- *         description: The todo was deleted
- *       404:
- *         description: The todo was not found
- */
-app.delete('/todos/:id', (req, res) => {
-    const index = todos.findIndex(t => t.id == req.params.id);
-    if (index >= 0) {
-        todos.splice(index, 1);
-        res.status(204).send();
-    } else {
-        res.status(404).send("Todo not found");
-    }
-});
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
