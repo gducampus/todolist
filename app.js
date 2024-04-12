@@ -214,6 +214,38 @@ app.post('/todos', (req, res) => {
     res.status(201).json(newTodo);
 });
 
+/**
+ * @swagger
+ * /todos/{id}:
+ *   get:
+ *     summary: Get a todo by id
+ *     tags: [Todos]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: The id of the todo to get
+ *     responses:
+ *       200:
+ *         description: The todo description by id
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Todo'
+ *       404:
+ *         description: Todo not found
+ */
+app.get('/todos/:id', (req, res) => {
+  const { id } = req.params;
+  const todo = todos[0].todolist.find(t => t.id === parseInt(id));
+  if (!todo) {
+      return res.status(404).send('Todo not found');
+  }
+  res.status(200).json(todo);
+});
+
 
 /**
  * @swagger
