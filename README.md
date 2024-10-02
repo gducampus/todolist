@@ -1,6 +1,6 @@
 # Todo List API Backend
 
-Ce projet est le backend pour l'application Todo List, destiné aux étudiants du Learning Campus pour le développement de projets frontend. Il fournit une API RESTful pour gérer une liste de tâches (todos).
+Ce projet est le backend pour l'application Todo List, destiné aux étudiants pour le développement de projets frontend. Il fournit une API RESTful pour gérer une liste de tâches (todos).
 
 ## Commencer
 
@@ -18,13 +18,13 @@ Suivez ces étapes pour configurer le backend sur votre machine locale :
 
    Ouvrez un terminal et utilisez la commande suivante pour cloner le dépôt GitHub :
 
-```git clone https://github.com/gducampus/totolist.git```
+```git clone https://github.com/gducampus/todolist.git```
 
 2. **Installer les dépendances**
 
 Naviguez dans le répertoire du projet cloné et exécutez :
 
-```cd totolist```
+```cd todolist```
 
 ```npm install```
 
@@ -41,5 +41,6 @@ Votre serveur devrait maintenant être en cours d'exécution et accessible local
 ## Utilisation
 
 Une fois le serveur démarré, vous pouvez accéder à l'API du Todo List Backend. Pour plus de détails sur les endpoints disponibles et comment les utiliser, veuillez vous référer à la documentation de l'API accessible via [http://localhost:3000/api-docs](http://localhost:3000/api-docs) après avoir démarré le serveur.
+
 
 
